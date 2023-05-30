@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <div class="CodeEditor">
+        <!-- Header div to diplay name -->
+        <div class="Header_Div">
+            <header>HTML</header>
+            <header>CSS</header>
+            <header>JS</header>
+        </div>
+        
+        <!-- input div with Html, Css and Js -->
+        <div class="CodeWritingDiv">
+            <label class="label" id="HTMLLabel">
+                <input id="HTMLWrite" type="text" name="HTMLWrite" placeholder="//Wrtie Your HTML Here">
+            </label>
+
+            <label class="label" id="CSSlabel">
+                <input id="CSSWrite" type="text" name="CSSWrite" placeholder="//Wrtie Your CSS Here">
+            </label>
+
+            <label class="label" id="JSlabel">
+                <input id="JSWrite" type="text" name="JSWrite" placeholder="//Wrtie Your JS Here">
+            </label>
+        </div>
+
+        <!-- Output div -->
+        <div class="OutputDiv">
+            <label class="labelMain" id="outputLable">
+                <input id="outputDisplay" type="text" name="outputDisplay" placeholder="//Output is Here" readonly>
+            </label>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

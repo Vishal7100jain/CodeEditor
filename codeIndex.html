@@ -12,33 +12,20 @@
 <body>
 
     <div class="CodeEditor">
-        <!-- Header div to diplay name -->
-        <div class="Header_Div">
-            <header>HTML</header>
-            <header>CSS</header>
-            <header>JS</header>
-        </div>
-        
         <!-- input div with Html, Css and Js -->
         <div class="CodeWritingDiv">
-            <label class="label" id="HTMLLabel">
-                <input id="HTMLWrite" type="text" name="HTMLWrite" placeholder="//Wrtie Your HTML Here">
-            </label>
+            <div class="LanguageName" type="button" id="HtmlLang">HTML</div>
+            <div class="LanguageName" type="button" id="CssLang">CSS</div>
+            <div class="LanguageName" type="button" id="JsLAng">Js</div>
 
-            <label class="label" id="CSSlabel">
-                <input id="CSSWrite" type="text" name="CSSWrite" placeholder="//Wrtie Your CSS Here">
-            </label>
-
-            <label class="label" id="JSlabel">
-                <input id="JSWrite" type="text" name="JSWrite" placeholder="//Wrtie Your JS Here">
-            </label>
+            <textarea name="HTML" id="HTML-code" cols="50" rows="15" placeholder="//Write Your HTML code here..."></textarea>
+            <textarea name="CSS" id="CSS-code" cols="50" rows="15" placeholder="//Write Your CSS code here..."></textarea>
+            <textarea name="JS" id="JS-code" cols="50" rows="15" placeholder="//Write Your JS code here..."></textarea>
         </div>
-
+        
         <!-- Output div -->
         <div class="OutputDiv">
-            <label class="labelMain" id="outputLable">
-                <input id="outputDisplay" type="text" name="outputDisplay" placeholder="//Output is Here" readonly>
-            </label>
+            <textarea name="Output" id="Output" cols="2" rows="17" placeholder="//Here is your Output..."></textarea>
         </div>
     </div>
 

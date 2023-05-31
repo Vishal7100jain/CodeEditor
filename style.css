@@ -6,25 +6,36 @@
 
 .CodeEditor{
     display: grid;
-    grid-template-rows: repeat(2,1fr);
 }
 
 .CodeWritingDiv{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    padding:4px;
 }
 
 .LanguageName{
     padding-left: 10px;
-    background-color: hsl(0, 42%, 48%);
+    margin-left: 3px;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    background-color: #2f2b2b;
+    color: white;
 }
 
 .CodeWritingDiv > textarea{
+    padding: 2px;
     background-color: #34363e;
     color: rgba(229, 197, 39, 0.977);
-    font-family: Sans-serif,;
+    font-family: serif;
+    margin-left:3px;
+    border: none;
 }
+
+textarea:focus{
+    outline: none;
+}
+
 
 .OutputDiv{
     padding: 4px;
@@ -32,5 +43,6 @@
 
 #Output{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.516);
+    background-color: #a7a2a2;
+    color: black;
 }

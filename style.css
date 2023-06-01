@@ -36,7 +36,6 @@ textarea:focus{
     outline: none;
 }
 
-
 .OutputDiv{
     padding: 4px;
 }
@@ -45,4 +44,10 @@ textarea:focus{
     width: 100%;
     background-color: #a7a2a2;
     color: black;
+    height: 43.5vh;
+}
+
+#Console{
+    background-color: green;
+    border: 1px solid green;
 }

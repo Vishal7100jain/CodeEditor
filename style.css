@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .CodeEditor{
@@ -26,7 +26,7 @@
 .CodeWritingDiv > textarea{
     padding: 2px;
     background-color: #34363e;
-    color: rgba(229, 197, 39, 0.977);
+    /* color: rgba(229, 197, 39, 0.977); */
     font-family: serif;
     margin-left:3px;
     border: none;

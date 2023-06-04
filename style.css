@@ -1,53 +1,48 @@
-*{
-    margin: 0;
-    padding: 0;
-    /* background-color: black; */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.CodeEditor{
-    display: grid;
+.CodeEditor {
+    background-color: #413f3f;
+  display: grid;
 }
 
-.CodeWritingDiv{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+.CodeWritingDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
 }
 
-.LanguageName{
-    padding-left: 10px;
-    margin-left: 3px;
-    cursor: pointer;
-    display: grid;
-    justify-content: center;
-    background-color: #2f2b2b;
-    color: white;
+.LanguageName {
+  padding-left: 55px;
+  cursor: pointer;
+  display: grid;
+  justify-content: center;
+  background-color: #2f2b2b;
+  color: white;
 }
 
-.CodeWritingDiv > textarea{
-    padding: 2px;
-    background-color: #34363e;
-    /* color: rgba(229, 197, 39, 0.977); */
-    font-family: serif;
-    margin-left:3px;
-    border: none;
+.CodeWritingDiv > textarea {
+  padding: 2px;
+  background-color: #34363e;
+  font-family: serif;
+  margin-left: 3px;
+  border: none;
+  width: auto;
 }
 
-textarea:focus{
-    outline: none;
+.OutputDiv > div {
+  display: flex;
+  justify-content: center;
 }
 
-.OutputDiv{
-    padding: 4px;
-}
+/* button {
+} */
 
-#Output{
-    width: 100%;
-    background-color: #a7a2a2;
-    color: black;
-    height: 43.5vh;
-}
-
-#Console{
-    background-color: green;
-    border: 1px solid green;
+#Output {
+  width: 100%;
+  background-color: #3e3e3e;
+  color: black;
+  height: 43.5vh;
 }

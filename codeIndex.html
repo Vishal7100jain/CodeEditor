@@ -16,7 +16,7 @@
     <script src="codemirror-5.65.13/mode/javascript/javascript.js"></script>
     <script src="codemirror-5.65.13/addon/edit/closetag.js"></script>
     <script src="Script.js"></script>
-    
+
 </head>
 
 <body>
@@ -28,41 +28,21 @@
             <div class="LanguageName" type="button" id="CssLang">CSS</div>
             <div class="LanguageName" type="button" id="JsLang">JAVASCRIPT</div>
 
-            <textarea name="HTML" id="HTML-code" cols="50" rows="15" placeholder='//WRITE "!DOC" TO GET HTML BASIC PAGE .....'></textarea>
-            <textarea name="CSS" id="CSS-code" cols="50" rows="15" placeholder="//WRITE YOUR CSS CODE HERE ....."></textarea>
-            <textarea name="JS" id="JS-code" cols="50" rows="15" placeholder="//WRITE YOUR JS CODE HERE ....."></textarea>
+            <textarea name="HTML" id="HTML-code" cols="50" rows="15"
+                placeholder='//WRITE "!DOC" TO GET HTML BASIC PAGE .....'></textarea>
+            <textarea name="CSS" id="CSS-code" cols="50" rows="15"
+                placeholder="//WRITE YOUR CSS CODE HERE ....."></textarea>
+            <textarea name="JS" id="JS-code" cols="50" rows="15"
+                placeholder="//WRITE YOUR JS CODE HERE ....."></textarea>
         </div>
-        
         <!-- Output div -->
         <div class="OutputDiv">
+            <div>
+            <button>Open New Tab</button>
+            </div>
             <iframe name="Output" id="Output" placeholder="//Here is your Output..." readonly></iframe>
         </div>
     </div>
-
-    <script>
-        var editor1 = CodeMirror.fromTextArea(document.getElementById('HTML-code'),{
-            mode:"xml",
-            theme:"midnight",
-            autoCloseBrackets: true,
-            autoCloseTags:true,
-            lineNumbers:true,
-        })
-
-        var editor2 = CodeMirror.fromTextArea(document.getElementById('CSS-code'),{
-            mode:"css",
-            theme:"midnight",
-            autoCloseBrackets: true,
-            autoCloseTags:true,
-            lineNumbers:true,
-        })
-
-        var editor3 = CodeMirror.fromTextArea(document.getElementById('JS-code'),{
-            mode:"javascript",
-            theme:"midnight",
-            autoCloseBrackets: true,
-            autoCloseTags:true,
-            lineNumbers:true,
-        })
-    </script>
 </body>
+
 </html>

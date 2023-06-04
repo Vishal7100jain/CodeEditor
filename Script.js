@@ -1,51 +1,71 @@
-let HTML_code = document.getElementById('HTML-code')
-let CSS_code = document.getElementById('CSS-code')
-let JS_code = document.getElementById('JS-code')
-let HtmlLang = document.getElementById('HtmlLang')
-let CssLang = document.getElementById('CssLang')
-let JsLang = document.getElementById('JsLang')
-let textarea = document.querySelectorAll('textarea')
+document.addEventListener('DOMContentLoaded', function () {
+    // Main logic to run html, css and js entered by user
+    var editor1 = CodeMirror.fromTextArea(document.getElementById('HTML-code'), {
+        mode: "xml",
+        theme: "midnight",
+        autoCloseBrackets: true,
+        autoCloseTags: true,
+        lineNumbers: true
+    })
 
+    var editor2 = CodeMirror.fromTextArea(document.getElementById('CSS-code'), {
+        mode: "css",
+        theme: "midnight",
+        autoCloseBrackets: true,
+        autoCloseTags: true,
+        lineNumbers: true
+    })
 
-let Output = document.getElementById('Output').contentDocument
-console.log(Output)
-let style = Output.createElement('style')
-Output.head.appendChild(style)
+    var editor3 = CodeMirror.fromTextArea(document.getElementById('JS-code'), {
+        mode: "javascript",
+        theme: "midnight",
+        autoCloseBrackets: true,
+        autoCloseTags: true,
+        lineNumbers: true
+    })
+    // Selecting the iframe element
+    var iframe = document.getElementById('Output').contentDocument;
+    setInterval(() => {
+        let htmlvalue = editor1.getValue()
+        let cssvalue = "<style>" + editor2.getValue() + "</style>"
+        let jsvalue = "<script>" + editor3.getValue() + "</script>"
 
-let script = Output.createElement('script')
-Output.body.appendChild(script)
+        iframe.body.innerHTML = htmlvalue
+        iframe.head.innerHTML = cssvalue
+        iframe.head.innerHTML = jsvalue
 
-// Main logic to run html, css and js entered by user
-function run() {         
-    Output.body.innerHTML = HTML_code.value
-    style.innerHTML = CSS_code.value
-    script.innerHTML = JS_code.value
+        if (editor1.getValue() == "!DOC") {
+            let a = editor1.getValue()
+            a = `<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                    </head>
+                    <body>
 
-    if (HTML_code.value === "!DOC") {
-        HTML_code.addEventListener('keypress', (event) => {
-            if (event.key === "Enter") {
-                HTML_code.value = `<!DOCTYPE html>
-                <html lang="en">
-                <head>
-                <meta charset="UTF-8">
-                <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-                </head>
-                <body>
-                
                 </body>
                 </html>`
-            }
-        })
-    }
-}
+        }
+    }, 10)
 
-
-Array.from(textarea).forEach((textarea) => {
-    textarea.addEventListener('click', (e) => {
-        setInterval(() => {
-            run()
-        }, 10)
-    })
 })
+// Array.from(textarea).forEach((textarea) => {
+//     textarea.addEventListener('click', (e) => {
+//         // if(e.target == HTML_code){
+//         //     console.log(e.target,HTML_code)
+//         //     // HtmlLang.style.backgroundColor = "red"
+//         //     // CssLang
+//         //     // JsLang
+//         // }
+//     })
+// })
+
+// });
+
+
+// htmlvalue.addEventListener('click', ()=>{
+//     console.log("clicked")
+// })

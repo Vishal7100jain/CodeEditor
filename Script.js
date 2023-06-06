@@ -35,14 +35,11 @@ document.addEventListener('DOMContentLoaded', function () {
         iframe.head.innerHTML = cssvalue
         iframe.head.innerHTML = jsvalue
 
+        let CodeMirror = document.querySelector('.CodeMirror')
+        CodeMirror.addEventListener('click', (div)=>{
+            // if(div.target == CodeWritingDiv. )
+            let JsLang = document.querySelector('#JsLang').nextElementSibling
+            console.log(JsLang)
+        })
     }, 10)
-
-        let array = [editor1, editor2, editor3]
-       for(let value of array){
-           if(value == editor1 ){
-               console.log(value)
-           }
-       }
-
-
 })

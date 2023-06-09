@@ -4,7 +4,7 @@
 }
 
 .CodeEditor {
-    background-color: #413f3f;
+  background-color: #413f3f;
   display: grid;
 }
 
@@ -23,7 +23,7 @@
   color: white;
 }
 
-.CodeWritingDiv > textarea {
+.CodeWritingDiv>textarea {
   padding: 2px;
   background-color: #34363e;
   font-family: serif;
@@ -32,13 +32,25 @@
   width: auto;
 }
 
-.OutputDiv > div {
+.OutputDiv>div {
   display: flex;
   justify-content: center;
+  padding: 1px;
 }
 
-/* button {
-} */
+button {
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button>a {
+  text-decoration: none;
+  color: white;
+}
 
 #Output {
   width: 100%;

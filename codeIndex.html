@@ -24,9 +24,9 @@
     <div class="CodeEditor">
         <!-- input div with Html, Css and Js -->
         <div class="CodeWritingDiv">
-            <div class="LanguageName" type="button" id="HtmlLang">HTML</div>
-            <div class="LanguageName" type="button" id="CssLang">CSS</div>
-            <div class="LanguageName" type="button" id="JsLang">JAVASCRIPT</div>
+            <div class="LanguageName" id="HtmlLang">HTML</div>
+            <div class="LanguageName" id="CssLang">CSS</div>
+            <div class="LanguageName" id="JsLang">JAVASCRIPT</div>
 
             <textarea name="HTML" id="HTML-code" cols="50" rows="15"
                 placeholder='//WRITE "!DOC" TO GET HTML BASIC PAGE .....'></textarea>
@@ -38,7 +38,7 @@
         <!-- Output div -->
         <div class="OutputDiv">
             <div>
-            <button>>Open New Tab</button>
+            <button onclick="runCode()">Open New Tab</button>
             </div>
             <iframe name="Output" id="Output" placeholder="//Here is your Output..." readonly></iframe>
         </div>

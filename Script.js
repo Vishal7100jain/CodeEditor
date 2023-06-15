@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoCloseTags: true,
         lineNumbers: true
     })
+
     // Selecting the iframe element
     var iframe = document.getElementById('Output').contentDocument;
     setInterval(() => {
@@ -33,17 +34,30 @@ document.addEventListener('DOMContentLoaded', function () {
         iframe.body.innerHTML = htmlvalue
         iframe.head.innerHTML = cssvalue
         iframe.head.innerHTML = jsvalue
-
+        return htmlvalue
     }, 10)
     
-    // let button = document.querySelector("button")
-    // button.addEventListener('click', ()=>{
-    //     const outputWindow = window.open('Output_tab.html');
-
-    //     setTimeout(()=>{
-    //         let
-    //         console.log("htmlvalue")
-    //     })
-    // })
     
+    function runCode(){
+        window.open('Output_tab.html');
+        setInterval(()=>{
+            let NewTabOutput = document.getElementsByTagName('iframe').contentDocument
+            console.log(NewTabOutput)
+            NewTabOutput.body.innerHTML = editor1.getValue()
+            
+            // let script = document.createElement('script')
+            // script.innerHTML = editor2.getValue()
+            // bodymain.appendChild(script)
+            
+            // let head = document.getElementsByTagName('head')
+            // let style = document.createElement('style')
+            // style.innerHTML = editor2.getValue()
+        })
+    }
+    return htmlvalue
 })
+
+
+setInterval(()=>{
+    console.log(htmlvalue)
+},1)

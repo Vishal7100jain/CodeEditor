@@ -27,37 +27,27 @@ document.addEventListener('DOMContentLoaded', function () {
     // Selecting the iframe element
     var iframe = document.getElementById('Output').contentDocument;
     setInterval(() => {
-        var htmlvalue = editor1.getValue()
-        var cssvalue = "<style>" + editor2.getValue() + "</style>"
-        var jsvalue = "<script>" + editor3.getValue() + "</script>"
+        let htmlvalue = editor1.getValue()
+        let cssvalue = "<style>" + editor2.getValue() + "</style>"
+        let jsvalue = "<script>" + editor3.getValue() + "</script>"
 
         iframe.body.innerHTML = htmlvalue
-        iframe.head.innerHTML = cssvalue
-        iframe.head.innerHTML = jsvalue
-        return htmlvalue
+        iframe.head.innerHTML = cssvalue +  jsvalue
     }, 10)
+
+
+
+    let button = document.getElementById('button');
+    button.addEventListener('click', () => {
+        let OutputTab = window.open('Output_tab.html');
+        let documentHtml = OutputTab.document;
+
+        let htmlValue = editor1.getValue();
+        let cssValue = "<style>" + editor2.getValue() + "</style>";
+        let jsValue = "<script>" + editor3.getValue() + "</script>";
     
-    
-    function runCode(){
-        window.open('Output_tab.html');
-        setInterval(()=>{
-            let NewTabOutput = document.getElementsByTagName('iframe').contentDocument
-            console.log(NewTabOutput)
-            NewTabOutput.body.innerHTML = editor1.getValue()
-            
-            // let script = document.createElement('script')
-            // script.innerHTML = editor2.getValue()
-            // bodymain.appendChild(script)
-            
-            // let head = document.getElementsByTagName('head')
-            // let style = document.createElement('style')
-            // style.innerHTML = editor2.getValue()
-        })
-    }
-    return htmlvalue
+        documentHtml.write(htmlValue);
+        documentHtml.write(cssValue);
+        documentHtml.write(jsValue);
+    });
 })
-
-
-setInterval(()=>{
-    console.log(htmlvalue)
-},1)

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoCloseTags: true,
         lineNumbers: true
     })
-
+    
     var editor2 = CodeMirror.fromTextArea(document.getElementById('CSS-code'), {
         mode: "css",
         theme: "midnight",
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoCloseTags: true,
         lineNumbers: true
     })
-
+    
     var editor3 = CodeMirror.fromTextArea(document.getElementById('JS-code'), {
         mode: "javascript",
         theme: "midnight",

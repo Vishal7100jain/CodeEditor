@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoCloseTags: true,
         lineNumbers: true
     })
-    
+
     var editor2 = CodeMirror.fromTextArea(document.getElementById('CSS-code'), {
         mode: "css",
         theme: "midnight",
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         autoCloseTags: true,
         lineNumbers: true
     })
-    
+
     var editor3 = CodeMirror.fromTextArea(document.getElementById('JS-code'), {
         mode: "javascript",
         theme: "midnight",
@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {
         let jsvalue = "<script>" + editor3.getValue() + "</script>"
 
         iframe.body.innerHTML = htmlvalue
-        iframe.head.innerHTML = cssvalue +  jsvalue
+        iframe.head.innerHTML = cssvalue + jsvalue
     }, 10)
 
 
 
+    // Logic for getting output on a new page/tab
     let button = document.getElementById('button');
     button.addEventListener('click', () => {
         let OutputTab = window.open('Output_tab.html');
@@ -45,9 +46,22 @@ document.addEventListener('DOMContentLoaded', function () {
         let htmlValue = editor1.getValue();
         let cssValue = "<style>" + editor2.getValue() + "</style>";
         let jsValue = "<script>" + editor3.getValue() + "</script>";
-    
+
         documentHtml.write(htmlValue);
         documentHtml.write(cssValue);
         documentHtml.write(jsValue);
     });
+
+    // Logic to get full page for coding...
+    let CloseOpen = document.getElementById('CloseOpen')
+    CloseOpen.addEventListener('click', () => {
+        let iframe = document.querySelector('iframe')
+        iframe.classList.toggle("hiddenclass")
+        let CodeMirror = document.querySelectorAll('.CodeMirror')[0]
+        let CodeMirror1 = document.querySelectorAll('.CodeMirror')[1]
+        let CodeMirror2 = document.querySelectorAll('.CodeMirror')[2]
+        CodeMirror.classList.toggle('height')
+        CodeMirror1.classList.toggle('height')
+        CodeMirror2.classList.toggle('height')
+    })
 })

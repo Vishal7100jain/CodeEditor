@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-y: visible;">
 
 <head>
     <meta charset="UTF-8">
@@ -33,27 +33,26 @@
         <div class="CodeWritingDiv">
             <div class="LanguageName" id="HtmlLang">HTML</div>
             <div class="LanguageName" id="CssLang">CSS</div>
-            <div class="LanguageName" id="JsLang">JAVASCRIPT</div>
+            <div class="LanguageName" id="JsLang">JAVASCRIPT
+                <div class="btn-group" style=" position: absolute; right: 10px;
+                height: 30px;" role="group">
+                    <button type="button" style="  display: grid;  
+                    align-content: center;" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false"></button>
+                    <ul class="dropdown-menu" style="padding: 0px;">
+                        <li id="button">Open New Tab</li>
+                        <li id="CloseOpen">Close/Open</li>
+                        <li>Dark/light</li>
+                    </ul>
+                </div>
+            </div>
 
-            <textarea name="HTML" id="HTML-code" cols="50" rows="15"
+            <textarea name="HTML" id="HTML-code" cols="50" rows="100"
                 placeholder='//WRITE "!DOC" TO GET HTML BASIC PAGE .....'></textarea>
             <textarea name="CSS" id="CSS-code" cols="50" rows="15"
                 placeholder="//WRITE YOUR CSS CODE HERE ....."></textarea>
             <textarea name="JS" id="JS-code" cols="50" rows="15"
                 placeholder="//WRITE YOUR JS CODE HERE ....."></textarea>
-        </div>
-        <!-- Output div -->
-        <div class="OutputDiv">
-            <div>
-                <span class="btn-group" role="group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false">Option</button>
-                    <ul class="dropdown-menu">
-                        <li id="button">Open New Tab</li>
-                        <li>Close</li>
-                    </ul>
-                </span>
-            </div>
         </div>
         <iframe name="Output" id="Output" placeholder="//Here is your Output..." readonly></iframe>
 </body>
